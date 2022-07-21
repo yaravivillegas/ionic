@@ -1,37 +1,45 @@
-Instalaciones recomendadas - Curso de ionic
-Instalaciones Necesarias
-Google Chrome
+# Instalaciones recomendadas - Curso de ionic
 
-Visual Studio Code
+## Instalaciones Necesarias
+* [Google Chrome](https://www.google.com/chrome/)
 
-Postman
+* [Visual Studio Code](https://code.visualstudio.com/)
 
-Mongo Compass
+* [Postman](https://www.postman.com/downloads/)
 
-Git
+* [Mongo Compass](https://www.mongodb.com/try/download/compass)
+
+* [Git](https://git-scm.com/)
+
+```
+Ejecutar en terminal:
 
 git config --global user.name "Tu nombre"
 git config --global user.email "Tu correo"
-Node
+```
 
-Android Studio
+* [Node](https://nodejs.org/es/)
 
-XCode - Sólo para usuarios de OSX
+* [Android Studio](https://developer.android.com/studio/?gclid=Cj0KCQjwhb36BRCfARIsAKcXh6GRXJN_hJrabNpOE94384hWx1uh4qPgqVQBiZJMkDEcNUgTQf3UwZoaAr-ZEALw_wcB&gclsrc=aw.ds)
 
-AngularCLI
+* XCode - Sólo para usuarios de OSX (en App)
 
-ionic framework
+* [AngularCLI](https://cli.angular.io/)
 
-Extensiones de VSCode
-Activitus Bar
+* [ionic framework](https://ionicframework.com/)
 
-ionic Snippets
 
-TypeScript Importer
+## Extensiones de VSCode
+* [Activitus Bar](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.activitusbar)
 
-Configuración del Bracket Pair Colorizer 2
-Bracket Pair Colorizer 2
+* [ionic Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-ionic-snippets)
 
+* [TypeScript Importer](https://marketplace.visualstudio.com/items?itemName=pmneo.tsimporter)
+
+### Configuración del Bracket Pair Colorizer 2
+
+[Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+```
 "bracket-pair-colorizer-2.colors": [
     "#fafafa",
     "#9F51B6",
@@ -40,7 +48,10 @@ Bracket Pair Colorizer 2
     "#9CDD29",
     "#C497D4"
 ],
-Tema que estoy usando en VSCode:
-Monokai Night
+```
+### Tema que estoy usando en VSCode:
 
-Iconos
+* [Monokai Night](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-monokai-night)
+
+* [Iconos](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
