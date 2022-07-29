@@ -1,2 +1,2 @@
 # ionic
-*https://ionicframework.com/docs/intro/cli
+https://ionicframework.com/docs/intro/cli
