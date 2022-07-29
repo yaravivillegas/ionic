@@ -1,2 +1,2 @@
 # ionic
-* https://ionicframework.com/docs/components
+https://ionicframework.com/docs/components
