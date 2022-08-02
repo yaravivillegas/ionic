@@ -7,7 +7,7 @@
 
 3 entrar a la carpeta de la app: cd myApp
 
-4 ejecutar app: ionic serve (ver el navegador) (ionic serve --lab)
+4 ejecutar app: ionic serve --lab (ver el navegador)
 
 5 Abrir la app en VSC
 
