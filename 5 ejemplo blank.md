@@ -14,5 +14,7 @@
 # Page, Component y Service
 
 1 ionic generate page nombrepage
+
 2 ionic generate component nombrecomponent
+
 3 ionic generate service nombreservice
