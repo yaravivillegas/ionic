@@ -20,6 +20,10 @@ git config --global user.email "Tu correo"
 
 * [Node](https://nodejs.org/es/)
 
+  revisión instalación:
+    node --version
+    npm --version
+
 * [Android Studio](https://developer.android.com/studio/?gclid=Cj0KCQjwhb36BRCfARIsAKcXh6GRXJN_hJrabNpOE94384hWx1uh4qPgqVQBiZJMkDEcNUgTQf3UwZoaAr-ZEALw_wcB&gclsrc=aw.ds)
 
 * XCode - Sólo para usuarios de OSX (en App)
