@@ -1,4 +1,4 @@
-# ejemplo crear app
+# ejemplo crear app con tabs
 
 1 ejecutar en el terminal (en la ruta que se creará la app): 
         ionic start myApp tabs (myApp: nombre aplicación)
