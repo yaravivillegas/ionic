@@ -28,8 +28,6 @@ git config --global user.email "Tu correo"
 
 * [Android Studio](https://developer.android.com/studio/?gclid=Cj0KCQjwhb36BRCfARIsAKcXh6GRXJN_hJrabNpOE94384hWx1uh4qPgqVQBiZJMkDEcNUgTQf3UwZoaAr-ZEALw_wcB&gclsrc=aw.ds)
 
-* XCode - Sólo para usuarios de OSX (en App)
-
 * [AngularCLI](https://cli.angular.io/)
 
 * [ionic framework](https://ionicframework.com/)
