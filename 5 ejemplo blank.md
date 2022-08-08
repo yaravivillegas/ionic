@@ -18,3 +18,5 @@
 2 ionic generate component nombrecomponent
 
 3 ionic generate service nombreservice
+
+#debugger;
