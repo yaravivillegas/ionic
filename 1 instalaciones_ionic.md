@@ -59,3 +59,6 @@ git config --global user.email "Tu correo"
 
 * [Iconos](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
+## Reconstruir los módulos de node
+npm install
+
