@@ -19,4 +19,7 @@
 
 3 ionic generate service nombreservice
 
-#debugger;
+# Debug
+
+Probar en método onInit():
+        debugger;
