@@ -23,3 +23,7 @@
 
 Probar en método onInit():
         debugger;
+        
+# Regenerar carpeta node
+
+npm install (en terminal en la ruta de la app)
