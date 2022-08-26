@@ -1,15 +1,12 @@
-# para instalar angular material
+#para instalar angular material
 
-1
-ejecutar en el terminal:
+1 Ejecutar en el terminal:
     ng add @angular/material
     
-2
-importar, en home.module.ts: 
+2 Importar, en home.module.ts: 
     import {MatIconModule} from '@angular/material/icon';
     
-3 
-agregar, en @NgModule del home.module.ts:
+3 Agregar, en @NgModule del home.module.ts:
   MatIconModule
   
 4 Agregar en el html:
