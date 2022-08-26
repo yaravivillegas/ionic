@@ -1,3 +1,16 @@
-# para instalar angular material ejecutar:
+# para instalar angular material
 
-ng add @angular/material
+1
+ejecutar en el terminal:
+    ng add @angular/material
+    
+2
+importar, en home.module.ts: 
+    import {MatIconModule} from '@angular/material/icon';
+    
+3 
+agregar, en @NgModule del home.module.ts:
+  MatIconModule
+  
+4 Agregar en el html:
+  <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
