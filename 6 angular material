@@ -1,5 +1,7 @@
 #para instalar angular material
-
+0 Ejecutar en el terminal:
+    npm install -g @angular/cli
+    
 1 Ejecutar en el terminal:
     ng add @angular/material
     
