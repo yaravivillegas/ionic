@@ -6,10 +6,10 @@
     ng add @angular/material
     
 2 Importar, en home.module.ts: 
-    import {MatIconModule} from '@angular/material/icon';
+    import { MatSliderModule } from '@angular/material/slider';
     
 3 Agregar, en @NgModule del home.module.ts:
-  MatIconModule
+  MatSliderModule
   
 4 Agregar en el html:
   <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
