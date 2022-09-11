@@ -1,0 +1,13 @@
+1 Crear app
+
+2 Crear 3 component
+
+3 Declarar en el routing-module del home, las rutas hijas que se cargaran al interior de Page Home
+
+4 Agregar en module del home los componentes
+
+5 Agregar el segment en el ts del home
+
+6 Crear código html en el home y en los component
+
+
