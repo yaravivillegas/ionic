@@ -1,0 +1,102 @@
+1 Crear app
+
+2 Crear component
+        ionic generate component nombre-componente
+
+3 Declarar en el routing-module del home, las rutas hijas que se cargaran al interior de Page Home
+
+        import { MisDatosComponent } from '../mis-datos/mis-datos.component';
+        
+        const routes: Routes = [
+        {
+          path: '',
+          component: HomePage,
+          children:[
+            {
+              path:'mis-datos',
+              component: MisDatosComponent
+            }
+          ]
+        }
+        ];
+
+
+4 Agregar en module del home los componentes
+        import { MisDatosComponent } from '../mis-datos/mis-datos.component';
+        
+        declarations: [HomePage,MisDatosComponent],
+
+5 Agregar el segment en el ts del home
+        constructor(private router: Router) {
+          this.router.navigate(['home/mis-datos'])
+         }
+         
+        segmentChanged($event){
+          console.log($event.detail.value);
+          let direction=$event.detail.value
+          this.router.navigate(['home/'+direction])
+        }
+
+6 Crear código html en el home y en los component
+
+        #html
+
+        <ion-segment value="mis-datos" (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="mis-datos">
+                <ion-icon name="home"></ion-icon>
+            </ion-segment-button>
+        </ion-segment>
+        
+        
+        #component
+        
+        <!-- Comienza el Content -->
+        <ion-content [fullscreen]="true" class="ion-padding-horizontal">
+        <ion-title class="ion-padding-top ion-text-center">
+        <ion-label>
+            <h1>Bienvenido</h1>
+            <!-- {{interpolacion}}
+               Permite mostrar los datos desde el script a la visual
+               verificar el data en el home.page.ts
+            -->
+            
+            <p>Usuario: {{usuario}}</p>
+        </ion-label>
+        </ion-title>
+   
+        <ion-item class="ion-padding-horizontal">
+            <ion-label position="stacked">Nombre</ion-label>
+            <ion-input type="text" [(ngModel)]="data.nombre"></ion-input>
+        </ion-item>
+        <ion-item class="ion-padding-horizontal">
+            <ion-label position="stacked">Apellido</ion-label>
+            <ion-input type="text" [(ngModel)]="data.apellido"></ion-input>
+        </ion-item>
+        <ion-item class="ion-padding-horizontal">
+            <ion-label position="stacked" class="ion-padding-bottom">Educación</ion-label>
+            <ion-select placeholder="Seleccione nivel" [(ngModel)]="data.education">
+                <ion-select-option *ngFor="let niv of niveles" [value]="niv.id">{{niv.nivel}}</ion-select-option>
+              </ion-select>
+          </ion-item>
+          <ion-item class="ion-padding-horizontal">
+              <ion-label position="stacked" class="ion-padding-bottom">Fecha Nacimiento</ion-label>
+              <ion-input type="date" [(ngModel)]="data.nacimiento"></ion-input>
+          </ion-item>
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-6>
+                      <ion-button shape="block" (click)="limpiar()">
+                          Limpiar
+                      </ion-button>
+                  </ion-col>
+                  <ion-col col-6>
+                      <ion-button shape="block" (click)="mostrar()">
+                          Mostrar
+                      </ion-button>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+          </ion-content>
+          <!-- Termina el Content -->
+
+
