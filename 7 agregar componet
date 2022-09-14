@@ -41,11 +41,19 @@
 
         #html
 
-        <ion-segment value="mis-datos" (ionChange)="segmentChanged($event)">
-            <ion-segment-button value="mis-datos">
-                <ion-icon name="home"></ion-icon>
-            </ion-segment-button>
-        </ion-segment>
+        <ion-header [translucent]="true">
+                <ion-toolbar>
+                    <ion-segment value="mis-datos" (ionChange)="segmentChanged($event)">
+                      <ion-segment-button value="mis-datos">
+                          <ion-icon name="home"></ion-icon>
+                      </ion-segment-button>
+                    </ion-segment>
+                </ion-toolbar>
+        </ion-header>
+
+        <ion-content [fullscreen]="true">
+                <ion-router-outlet></ion-router-outlet>
+        </ion-content>
         
         
         #component
