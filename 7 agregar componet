@@ -39,7 +39,7 @@
 
 6 Crear código html en el home y en los component
 
-        #html
+        #html del home (página que contiene los component)
 
         <ion-header [translucent]="true">
                 <ion-toolbar>
@@ -57,7 +57,7 @@
         </ion-content>
         
         
-        #component
+        #html del component
         
         <!-- Comienza el Content -->
         <ion-content [fullscreen]="true" class="ion-padding-horizontal">
