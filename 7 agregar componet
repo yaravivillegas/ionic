@@ -52,6 +52,7 @@
         </ion-header>
 
         <ion-content [fullscreen]="true">
+                <!-- Aquí se desplegara todos los Component que se declararon como children en HomePageModule -->
                 <ion-router-outlet></ion-router-outlet>
         </ion-content>
         
