@@ -1,0 +1,8 @@
+1 Agregar al routing.module de app:
+
+    {
+      path: '**',
+      loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+    },
+
+2 Crear una página, que se muestre cuando no encuentre la ruta (not found 404)
