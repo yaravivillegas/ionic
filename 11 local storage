@@ -21,4 +21,121 @@ Proyecto en ionic con local storage
       })
       export class AppModule {}
       
-   
+      
+4.- Creamos el servicio y su código
+      ionic generate service services/bd-local
+      
+      *****************************************
+      
+      import { Injectable } from '@angular/core';
+      import { ToastController } from '@ionic/angular';
+      import { Storage } from '@ionic/storage-angular';
+      import { IAgenda } from '../interfaces/iagenda';
+
+
+      @Injectable({
+        providedIn: 'root'
+      })
+      export class BdLocalService {
+
+        agenda: IAgenda[]=[];
+        private _storage: Storage | null = null;
+
+        constructor(private storage: Storage, public toastController: ToastController) {
+          this.init();
+          //cargo el contenido de localStorage en agenda
+          this.cargarContactos();
+        }
+
+        guardarContacto(nombre:string, nro:string){
+          //creo una consulta lambda para saber si este nuevo contacto no existe ya
+          const existe= this.agenda.find(c=>c.strNumero===nro);
+          if (!existe) {
+            this.agenda.unshift({strNombre:nombre,strNumero:nro})
+            this._storage.set('agenda',this.agenda);
+            this.presentToast("Contacto Agregado con Exito!!")
+          } else {
+            this.presentToast("Error: Contacto YA Existe!!")
+          }
+        }
+        async cargarContactos() {
+          const miAgenda=await this.storage.get('agenda');
+          if (miAgenda) {
+            this.agenda=miAgenda;
+          }
+        }
+
+        async init() {
+          // If using, define drivers here: await this.storage.defineDriver(/*...*/);
+          const storage = await this.storage.create();
+          this._storage = storage;
+        }
+
+        async presentToast(mensaje:string) {
+          const toast = await this.toastController.create({
+            message: mensaje,
+            translucent:true,
+            color:'medium',
+            position: 'top',
+            duration: 2000
+          });
+          toast.present();
+        }
+      }
+
+5.- Creamos la interfaz y su código
+            ionic generate interface interfaces/iagenda
+             ******************************************
+ 
+             export interface IAgenda {
+                    strNombre: string;
+                    strNumero: string;
+            }
+            
+6.- Agregamos el html y ts de la página
+            home.html
+            *********
+      
+            <ion-header [translucent]="true">
+                <ion-toolbar>
+                    <ion-title>
+                        Ejemplo LocalStorage
+                    </ion-title>
+                </ion-toolbar>
+             </ion-header>
+
+            <ion-content [fullscreen]="true">
+                <ion-card>
+                    <ion-input type="text" placeholder="Ingrese nombre" [(ngModel)]="nombre"></ion-input>
+                    <ion-input type="text" placeholder="Ingrese numero" [(ngModel)]="nro"></ion-input>
+                    <ion-button shape="block" (click)="guardar()">Guardar</ion-button>
+
+                </ion-card>
+            </ion-content>
+            
+            *******
+            home.ts
+            *******
+            import { Component } from '@angular/core';
+            import { BdLocalService } from '../services/bd-local.service';
+            @Component({
+              selector: 'app-home',
+              templateUrl: 'home.page.html',
+              styleUrls: ['home.page.scss'],
+            })
+            export class HomePage {
+
+              nombre:string;
+              nro:string;
+              constructor(public bdlocalservice: BdLocalService) {}
+              guardar(){
+                this.bdlocalservice.guardarContacto(this.nombre,this.nro)
+              }
+
+            }
+            
+7.- Revisar local storage
+            inspeccionar / Applications / Storage / IndexedDB / ionicstorage /ionickv
+
+
+
