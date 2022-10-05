@@ -1,0 +1,5 @@
+1 Ejecutar en el directorio de la app:
+        npm install -g json-server
+
+2 Ejecutar en el mismo directorio:
+        json-server -H 192.168.56.1 .\db.json
