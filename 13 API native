@@ -1,0 +1,35 @@
+1 Para instalar el código nativo:
+      ionic cordova plugin add nombre-plugin
+
+2 Para instalar el código typeScript:
+      npm install @ionic-native/plugin
+      
+3 Todos los Plugin que instalamos en la aplicación debe ser importados en el app.module.ts:
+      import { Camera } from '@ionic-native/camera/ngx';
+      ....
+      @NgModule({
+      ...
+        Camera
+      ...
+      })
+      
+4 Los plugins se usan en los servivios
+
+---------------------------------------------------------------
+Algunos plugins:
+  Camera:  
+        Nativo: cordova-plugin-camera
+        TypeScript: @ionic-native/camera
+  Device: 
+        Nativo: cordova-plugin-device
+        TypeScript: @ionic-native/device
+  Geolocation: 
+        Nativo: cordova-plugin-geolocation 
+        TypeScript: @ionic-native/geolocation
+        
+Plugins externos:
+        Google Maps: ionic-native-google-maps
+        Facebook: 
+            Nativo: cordova-plugin-facebook4
+            TypeScript: @ionic-native/facebook
+
