@@ -1,5 +1,7 @@
-1 Ejecutar en el directorio de la app:
+1 Ejecutar en el directorio de la app (para instalar el servidor):
         npm install -g json-server
 
-2 Ejecutar en el mismo directorio:
+2 Ejecutar en el mismo directorio (para ejecutar el servidor, la IP debe ser la del equipo):
         json-server -H 192.168.56.1 .\db.json
+
+3 El archivo json debe estar dentro de la estructira de la app, en la raíz
