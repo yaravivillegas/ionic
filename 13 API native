@@ -1,8 +1,8 @@
 1 Para instalar el código nativo:
-      ionic cordova plugin add nombre-plugin
+      npm init @capacitor/plugin
 
 2 Para instalar el código typeScript:
-      npm install @ionic-native/plugin
+      npm install @awesome/plugin
       
 3 Todos los Plugin que instalamos en la aplicación debe ser importados en el app.module.ts:
       import { Camera } from '@ionic-native/camera/ngx';
